@@ -14,4 +14,8 @@ class ApplicationController < Sinatra::Base
     erb :not_found
   end
 
+  get '/content' do
+    erb :content
+  end
+
 end

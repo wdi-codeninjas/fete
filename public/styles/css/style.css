@@ -2,16 +2,46 @@ body {
   background-image: url("http://i.imgur.com/2fPC8Sk.jpg");
   background-size: cover;
   background-attachment: fixed;
-  position: relative;
-  float: left;
   color: white; }
 
 .logo-text {
   position: relative;
   float: left; }
 
+.map {
+  position: relative;
+  float: left;
+  margin-left: -115px;
+  border: 2px solid red;
+  width: 300px; }
+
+.pinmap {
+  position: relative;
+  float: left;
+  margin-left: -115px;
+  border: 2px solid red; }
+
+.globe {
+  position: relative;
+  float: left;
+  margin-left: -115px;
+  border: 2px solid red; }
+
 .col-md-6 {
   border: 2px solid red; }
+
+.col-md-8 {
+  border: 2px solid red; }
+
+.col-md-2 {
+  border: 2px solid red; }
+
+footer {
+  border: 2px solid red; }
+
+.col-md-4 {
+  border: 2px solid red;
+  text-align: center; }
 
 .eq-spinner {
   height: 20px;
