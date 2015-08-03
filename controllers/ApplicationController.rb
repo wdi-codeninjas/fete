@@ -22,4 +22,7 @@ class ApplicationController < Sinatra::Base
     erb :login
   end
 
+  get '/register' do
+    erb :register
+  end
 end
