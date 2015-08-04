@@ -1,9 +1,15 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
+    $('.empty').click(function(event) {
+      $('.empty').slideUp(2000);
+    });
+
+    $('.menu').hide();
+
     $.ajax({
       method: "GET",
-      url: "http://ws.audioscrobbler.com/2.0/?method=geo.getevents&location=chicago&api_key=2e8b4c0a324101689acd8d782097b1fc&format=json",
+      url: "http://ws.audioscrobbler.com/2.0/?method=geo.getevents&location=los angeles&api_key=2e8b4c0a324101689acd8d782097b1fc&format=json",
       dataType: "json",
 
       success: function(data) {
@@ -14,6 +20,14 @@ $( document ).ready(function() {
 
       }
     });
+
+    $('.btn.btn-default.btn-lg').click(function(event) {
+      $('.menu').toggle(1000);
+    });
+
+
+
+
 
 });
 $('.forgot-pass').click(function(event) {
