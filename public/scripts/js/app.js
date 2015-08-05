@@ -13,6 +13,12 @@ $( document ).ready(function() {
 
 
   $('#city-submit').click(function(evt) {
+    var map = new GMaps({
+          div: '#map',
+          lat: 0,
+          lng: 0,
+          zoom: 12
+        });
       var cityname = $('#address').val();
 
     $.ajax({
@@ -22,23 +28,20 @@ $( document ).ready(function() {
 
       success: function(data) {
         console.log(data);
+
+
         for (var i = 0; i < 10; i++) {
           var concert = data.events.event[i];
           $("ul").append("<li>" + concert.title + "  |  " + concert.venue.name + "  |  " + formatDate(concert.startDate) + "  |  " + concert.venue.location['geo:point']['geo:lat'] + "  |  " + concert.venue.location['geo:point']['geo:long'] + "</li>");
           $("ul").append("<li><img height='200px' width='200px' src='"+ concert.image[3]['#text'] + "'></li>");
 
+
+
           var lat = concert.venue.location['geo:point']['geo:lat'];
           var long = concert.venue.location['geo:point']['geo:long'];
-          console.log(lat);
-          console.log(long);
-
-            GMaps.geocode({
-              address: $('#address').val(),
-              callback: function(results, status){
-              if (status == 'OK') {
-                var latlng = results[0].geometry.location;
-                map.setCenter(latlng.lat(), latlng.lng());
-                map.addMarker({
+            
+              map.setCenter(lat, long);
+              map.addMarker({
                  lat: lat,
                  lng: long,
                  title: cityname,
@@ -46,16 +49,8 @@ $( document ).ready(function() {
                    alert('You clicked in this marker');
                  }
                 });
-              }
-            }
-          });
 
-        var map = new GMaps({
-              div: '#map',
-              lat: lat,
-              lng: long,
-              zoom: 12
-            });
+
         }
 
       }
