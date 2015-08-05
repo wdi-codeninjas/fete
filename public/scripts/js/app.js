@@ -22,12 +22,11 @@ $( document ).ready(function() {
 
       success: function(data) {
         console.log(data);
-        // var lat = new Array();
-        // var long = new Array();
         for (var i = 0; i < 10; i++) {
           var concert = data.events.event[i];
           $("ul").append("<li>" + concert.title + "  |  " + concert.venue.name + "  |  " + formatDate(concert.startDate) + "  |  " + concert.venue.location['geo:point']['geo:lat'] + "  |  " + concert.venue.location['geo:point']['geo:long'] + "</li>");
           $("ul").append("<li><img height='200px' width='200px' src='"+ concert.image[3]['#text'] + "'></li>");
+
           var lat = concert.venue.location['geo:point']['geo:lat'];
           var long = concert.venue.location['geo:point']['geo:long'];
           console.log(lat);
@@ -40,17 +39,22 @@ $( document ).ready(function() {
                 var latlng = results[0].geometry.location;
                 map.setCenter(latlng.lat(), latlng.lng());
                 map.addMarker({
-                  lat: lat,
-                  lng: long
+                 lat: lat,
+                 lng: long,
+                 title: cityname,
+                 click: function(e) {
+                   alert('You clicked in this marker');
+                 }
                 });
               }
             }
           });
 
-          new GMaps({
+        var map = new GMaps({
               div: '#map',
               lat: lat,
-              lng: long
+              lng: long,
+              zoom: 12
             });
         }
 

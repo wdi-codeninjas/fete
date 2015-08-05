@@ -29,6 +29,9 @@ body {
   text-align: center;
   margin-top: -110px; }
 
+#address {
+  color: black; }
+
 .menu-items {
   height: 350px;
   width: 175px;
