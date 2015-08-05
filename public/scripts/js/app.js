@@ -13,13 +13,16 @@ $( document ).ready(function() {
 
 
   $('#city-submit').click(function(evt) {
+    $('#city-name-wrapper h1').empty();
+    $('ul').empty();
     var map = new GMaps({
           div: '#map',
           lat: 0,
           lng: 0,
           zoom: 12
         });
-      var cityname = $('#address').val();
+      var cityname = $('#address').val().toUpperCase();
+      $('#city-name-wrapper h1').append(cityname);
 
     $.ajax({
       method: "GET",
@@ -32,14 +35,14 @@ $( document ).ready(function() {
 
         for (var i = 0; i < 10; i++) {
           var concert = data.events.event[i];
-          $("ul").append("<li>" + concert.title + "  |  " + concert.venue.name + "  |  " + formatDate(concert.startDate) + "  |  " + concert.venue.location['geo:point']['geo:lat'] + "  |  " + concert.venue.location['geo:point']['geo:long'] + "</li>");
+          $("ul").append("<li>" + concert.title + "  |  " + concert.venue.name + "  |  " + formatDate(concert.startDate) + "</li>");
           $("ul").append("<li><img height='200px' width='200px' src='"+ concert.image[3]['#text'] + "'></li>");
 
 
 
           var lat = concert.venue.location['geo:point']['geo:lat'];
           var long = concert.venue.location['geo:point']['geo:long'];
-            
+
               map.setCenter(lat, long);
               map.addMarker({
                  lat: lat,
