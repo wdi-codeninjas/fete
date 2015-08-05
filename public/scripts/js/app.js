@@ -1,7 +1,7 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
-    $('.empty').click(function(event) {
+    $('.empty').click(function(concert) {
       $('.empty').slideUp(2000);
     });
 
@@ -12,10 +12,12 @@ $( document ).ready(function() {
 
 
 
+  $('#city-submit').click(function(evt) {
+      var cityname = $('#address').val();
 
     $.ajax({
       method: "GET",
-      url: "http://ws.audioscrobbler.com/2.0/?method=geo.getevents&location=chicago&api_key=2e8b4c0a324101689acd8d782097b1fc&format=json",
+      url: "http://ws.audioscrobbler.com/2.0/?method=geo.getEvents&location=" + cityname + "&api_key=2e8b4c0a324101689acd8d782097b1fc&format=json",
       dataType: "json",
 
       success: function(data) {
@@ -23,17 +25,17 @@ $( document ).ready(function() {
         // var lat = new Array();
         // var long = new Array();
         for (var i = 0; i < 10; i++) {
-          var event = data.events.event[i];
-          $("ul").append("<li>" + event.title + "  |  " + event.venue.name + "  |  " + formatDate(event.startDate) + "  |  " + event.venue.location['geo:point']['geo:lat'] + "  |  " + event.venue.location['geo:point']['geo:long'] + "</li>");
-          $("ul").append("<li><img height='200px' width='200px' src='"+ event.image[3]['#text'] + "'></li>");
-          var lat = event.venue.location['geo:point']['geo:lat'];
-          var long = event.venue.location['geo:point']['geo:long'];
+          var concert = data.events.event[i];
+          $("ul").append("<li>" + concert.title + "  |  " + concert.venue.name + "  |  " + formatDate(concert.startDate) + "  |  " + concert.venue.location['geo:point']['geo:lat'] + "  |  " + concert.venue.location['geo:point']['geo:long'] + "</li>");
+          $("ul").append("<li><img height='200px' width='200px' src='"+ concert.image[3]['#text'] + "'></li>");
+          var lat = concert.venue.location['geo:point']['geo:lat'];
+          var long = concert.venue.location['geo:point']['geo:long'];
           console.log(lat);
           console.log(long);
 
-                    GMaps.geocode({
-            address: $('#address').val(),
-            callback: function(results, status) {
+            GMaps.geocode({
+              address: $('#address').val(),
+              callback: function(results, status){
               if (status == 'OK') {
                 var latlng = results[0].geometry.location;
                 map.setCenter(latlng.lat(), latlng.lng());
@@ -55,14 +57,17 @@ $( document ).ready(function() {
       }
 
     });
+  });
 
 
 
 
-    $('.btn.btn-default.btn-lg').click(function(event) {
+    $('.btn.btn-default.btn-lg').click(function(concert) {
       $('.menu').toggle(1000);
       $('.menu-items').delay(500).toggle(1000);
     });
+
+
 
 });
 
