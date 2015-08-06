@@ -8,6 +8,9 @@ body {
   position: relative;
   float: left; }
 
+#city-name-wrapper {
+  text-align: center; }
+
 #city-submit {
   position: relative;
   float: left;
