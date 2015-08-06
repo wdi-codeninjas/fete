@@ -15,6 +15,8 @@ $( document ).ready(function() {
   $('#city-submit').click(function(evt) {
     $('#city-name-wrapper h1').empty();
     $('ul').empty();
+    $('#map').toggle();
+
     var map = new GMaps({
           div: '#map',
           lat: 0,

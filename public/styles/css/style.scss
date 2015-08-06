@@ -4,6 +4,10 @@ body {
   background-attachment: fixed;
   color: white;
 }
+// #body-wrapper {
+//   background-color: white;
+//   opacity: 0.8;
+// }
 
 .logo-text {
   position: relative;
@@ -20,7 +24,7 @@ float: left;
 margin-left: 69%;
 margin-top: -26px;
 background-color: rgba(255, 255, 255, 0);
-color: rgba(47, 47, 47, 0.62);
+color: rgba(255, 255, 255, 0.51);
 border: 1px solid rgba(67, 67, 67, 0.61);
 height: 26px;
 }
@@ -41,15 +45,13 @@ height: 26px;
     background-color: rgba(255, 0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0.37);}
 
-
-.empty {
-  background-color: rgba(143, 241, 195, 0);
-}
-
 #map {
   height: 300px;
   width: 50%;
   margin-left: 25%;
+  background-color: rgb(33, 168, 120);
+  opacity: 0.8;
+  display: none;
 }
 
 .content-wrapper {
@@ -132,7 +134,8 @@ height: 26px;
 
 .empty {
   width: 100%;
-  height: 600px;
+  height: 620px;
+  background-color: rgba(143, 241, 195, 0);
 }
 
 .col-md-6 {
