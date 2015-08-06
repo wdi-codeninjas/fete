@@ -30,7 +30,7 @@ $( document ).ready(function() {
 
     $.ajax({
       method: "GET",
-      url: "http://ws.audioscrobbler.com/2.0/?method=geo.getEvents&location=" + cityname + "&api_key=2e8b4c0a324101689acd8d782097b1fc&format=json",
+      url: "http://ws.audioscrobbler.com/2.0/?method=geo.getEvents&location=" + cityname + "&api_key=d7956184b9abfb6d926912d4d3058fc2&format=json",
       dataType: "json",
 
       success: function(data) {
