@@ -1,9 +1,7 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
-    $('.empty').click(function(concert) {
-      $('.empty').slideUp(2000);
-    });
+    
 
 
     $('.menu').hide();
@@ -13,6 +11,7 @@ $( document ).ready(function() {
 
 
   $('#city-submit').click(function(evt) {
+    $('.empty').slideUp(2000);
     $('#city-name-wrapper h1').empty();
     $('ul').empty();
     $('#map').toggle();
@@ -37,7 +36,7 @@ $( document ).ready(function() {
 
         for (var i = 0; i < 10; i++) {
           var concert = data.events.event[i];
-          $("ul").append("<li>" + concert.title + "  <br> " + concert.venue.name + "  <br>  " + formatDate(concert.startDate) + "<hr></li>");
+          $("ul").append("<hr><li>" + concert.title + "  <br> " + concert.venue.name + "  <br>  " + formatDate(concert.startDate) + "</li>");
           $("ul").append("<img class='content-images' height='200px' width='200px' src='"+ concert.image[3]['#text'] + "'>");
 
 
