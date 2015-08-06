@@ -1,19 +1,22 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
-    
+
 
 
     $('.menu').hide();
-    $('.menu-items').hide();
+    $('.eq-spinner').hide();
+
 
 
 
 
   $('#city-submit').click(function(evt) {
     $('.empty').slideUp(2000);
+    $('.pinmap').slideUp(2000);
     $('#city-name-wrapper h1').empty();
     $('ul').empty();
+    $('.eq-spinner').fadeIn(600).fadeOut(2000);
     $('#map').toggle();
 
     var map = new GMaps({
@@ -38,6 +41,14 @@ $( document ).ready(function() {
           var concert = data.events.event[i];
           $("ul").append("<hr><li>" + concert.title + "  <br> " + concert.venue.name + "  <br>  " + formatDate(concert.startDate) + "</li>");
           $("ul").append("<img class='content-images' height='200px' width='200px' src='"+ concert.image[3]['#text'] + "'>");
+
+          var concertform = '<form class="concertPost" action="/concerts/save_event" method="post">';
+          concertform = concertform + '<input type="hidden" name="title" value="' + concert.title + '">';
+          concertform = concertform + '<input type="hidden" name="name" value="' + concert.venue.name + '">';
+          concertform = concertform + '<input type="hidden" name="date" value="' + formatDate(concert.startDate) + '">';
+          concertform = concertform + '<input class="addconcert" type="submit" value="Add Event">';
+          concertform = concertform + '</form>';
+          $('ul').append(concertform);
 
 
 
@@ -67,7 +78,6 @@ $( document ).ready(function() {
 
     $('.btn.btn-default.btn-lg').click(function(concert) {
       $('.menu').toggle(1000);
-      $('.menu-items').delay(500).toggle(1000);
     });
 
 

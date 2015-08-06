@@ -4,6 +4,30 @@ body {
   background-attachment: fixed;
   color: white; }
 
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100; }
+
+.row {
+  margin: 0 auto; }
+
+h1 {
+  color: #21A675; }
+
+input.addconcert {
+  position: relative;
+  float: left;
+  background-color: rgba(255, 255, 255, 0);
+  color: #21A675;
+  border: 1px solid rgba(67, 67, 67, 0.61);
+  height: 26px;
+  margin-left: -82%;
+  margin-top: -10%; }
+
+a {
+  color: #21A675; }
+
 .logo-text {
   position: relative;
   float: left; }
@@ -11,60 +35,90 @@ body {
 #city-name-wrapper {
   text-align: center; }
 
+#login-button {
+  position: relative;
+  float: left;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.51);
+  border: 1px solid #21A675;
+  height: 26px; }
+
+#register-button {
+  position: relative;
+  float: left;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.51);
+  border: 1px solid #21A675;
+  height: 26px;
+  margin-left: 30%; }
+
+.buttons-wrapper {
+  margin-left: 38%;
+  float: left;
+  margin-top: 10%;
+  position: relative; }
+
+.buttons-wrapper.text {
+  margin-left: -44px; }
+
 #city-submit {
   position: relative;
   float: left;
-  margin-left: 69%;
-  margin-top: -26px;
+  margin-left: 38%;
+  border: 1px solid #21A675;
+  margin-top: 18px;
   background-color: rgba(255, 255, 255, 0);
   color: rgba(255, 255, 255, 0.51);
-  border: 1px solid rgba(67, 67, 67, 0.61);
   height: 26px; }
 
 .row.city-input-wrapper {
   margin-left: 12%;
   width: 250px;
-  margin-top: 10%;
+  margin-top: 50%;
   float: left; }
 
 ul li {
   list-style-type: none; }
 
+ul {
+  background-color: rgba(27, 27, 27, 0.63);
+  margin-top: 25%; }
+
 #address {
-  color: rgba(255, 255, 255, 0.51);
   background-color: rgba(255, 0, 0, 0);
-  border: 1px solid rgba(0, 0, 0, 0.37); }
+  border: 2px solid #21A675;
+  text-align: center;
+  font-size: 35px;
+  height: 50px;
+  width: 100%; }
 
 #map {
-  height: 300px;
+  height: 400px;
   width: 50%;
   margin-left: 25%;
   background-color: #21a878;
   opacity: 0.8;
+  border-radius: 60%;
+  margin-top: 5%;
   display: none; }
 
 .btn.btn-default.btn-lg {
-  opacity: .8;
   position: relative;
   float: left;
-  z-index: 10; }
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0);
+  color: #21A675;
+  border: 0px solid gray; }
 
 .menu {
-  width: 100%;
+  width: 15%;
   height: 1000px;
   background-color: rgba(15, 15, 15, 0.68);
   position: fixed;
   z-index: 5;
-  padding-top: 100px;
+  padding-top: 20%;
   text-align: center;
   margin-top: -110px; }
-
-.menu-items {
-  height: 350px;
-  width: 175px;
-  position: relative;
-  float: left;
-  margin-left: 30%; }
 
 .inputcity {
   float: left;
@@ -96,8 +150,9 @@ ul li {
 .pinmap {
   position: relative;
   float: left;
-  margin-left: 40%;
+  margin-left: 43%;
   width: 150px;
+  margin-top: 3%;
   height: 150px; }
 
 .content-images {
@@ -110,23 +165,27 @@ ul li {
   background-color: rgba(143, 241, 195, 0); }
 
 .col-md-8 {
+  background-color: rgba(27, 27, 27, 0.63);
   margin-top: 5%; }
 
 footer {
   position: relative;
   float: left;
-  background-color: rgba(85, 85, 85, 0.63);
-  margin-top: 5%; }
-
-.col-md-12.index {
-  background-color: rgba(43, 43, 43, 0.43);
+  background-color: rgba(27, 27, 27, 0.63);
   margin-top: 5%; }
 
 .col-md-12.header {
-  background-color: rgba(85, 85, 85, 0.63); }
+  background-color: rgba(27, 27, 27, 0.63);
+  width: 100%; }
 
 .col-md-12.content {
-  margin-top: 5%; }
+  width: 100%;
+  height: 350px;
+  margin-top: 15%;
+  background-color: rgba(27, 27, 27, 0.63); }
+
+.col-md-12 {
+  padding: 0; }
 
 .col-md-4 {
   text-align: center; }
@@ -134,9 +193,10 @@ footer {
 .eq-spinner {
   height: 20px;
   width: 21px;
-  float: right;
-  margin-right: 42%;
-  margin-top: 6%;
+  float: left;
+  position: fixed;
+  margin-left: -1%;
+  margin-top: 9%;
   transform: rotate(180deg); }
 
 .eq-spinner:before, .eq-spinner:after, .eq-spinner > i {

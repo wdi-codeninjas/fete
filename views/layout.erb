@@ -25,7 +25,14 @@
       </div>
       <div class="col-md-6">
         <div class="eq-spinner"><i /></div>
-        <div class="logo-text">Fete Music</div>
+        <div class="logo-text">Song Track</div>
+
+        <% if session[:user].nil? == false %>
+        Hi, <%= session[:user].username %>
+        <a href="/">Logout</a>
+        <% else %>
+        <a href="/users/login">Login</a>
+        <% end %>
       </div>
     </div>
   </div>
@@ -34,13 +41,12 @@
 <body>
 <!-- <div id='body-wrapper'> -->
 <div class="menu">
-  <div class="menu-items">
-    <h1>About</h1>
-    <h1>Search</h1>
-    <h1>Home</h1>
-    <h1>Map</h1>
+    <a href="/"><h1>Home</h1></a>
+    <a href="/about"><h1>About</h1></a>
+    <a href="/users/login"><h1>Login</h1></a>
+    <a href="/users/register"><h1>Register</h1></a>
+    <h1>My Concerts</h1>
     <h1>Contact</h1>
-  </div>
 </div>
 
 <%= yield %>
@@ -49,7 +55,7 @@
 
 
 <footer class="col-md-12 footer">
-   <h1>&copy;fete</h1>
+   <h1>&copy;SongTrack</h1>
 </footer>
 
 
