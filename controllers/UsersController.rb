@@ -23,11 +23,11 @@ class UsersController < ApplicationController
     pwd = params[:password]
     if user.password_hash == BCrypt::Engine.hash_secret(pwd, user.password_salt)
       @message = 'You have been logged in succesfully'
-      return erb :login_notice
+      return erb :index
 
     else
       @message = 'Your password does not match'
-      return erb :login_notice
+      return erb :index
     end
 
 
@@ -59,7 +59,7 @@ class UsersController < ApplicationController
 
     @message = 'You have succesfully registered!'
 
-    erb :register_notice
+    erb :index
 
   end
 
@@ -71,5 +71,5 @@ class UsersController < ApplicationController
       return false
     end
   end
-  
+
 end

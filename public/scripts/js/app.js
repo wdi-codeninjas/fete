@@ -35,8 +35,8 @@ $( document ).ready(function() {
 
         for (var i = 0; i < 10; i++) {
           var concert = data.events.event[i];
-          $("ul").append("<li>" + concert.title + "  |  " + concert.venue.name + "  |  " + formatDate(concert.startDate) + "</li>");
-          $("ul").append("<li><img height='200px' width='200px' src='"+ concert.image[3]['#text'] + "'></li>");
+          $("ul").append("<li>" + concert.title + "  <br> " + concert.venue.name + "  <br>  " + formatDate(concert.startDate) + "<hr></li>");
+          $("ul").append("<img class='content-images' height='200px' width='200px' src='"+ concert.image[3]['#text'] + "'>");
 
 
 

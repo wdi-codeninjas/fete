@@ -11,19 +11,36 @@ body {
 }
 
 #city-name-wrapper {
-  
+
 }
 
 #city-submit {
   position: relative;
-  float: left;
-  margin-left: 110%;
+float: left;
+margin-left: 69%;
+margin-top: -26px;
+background-color: rgba(255, 255, 255, 0);
+color: rgba(47, 47, 47, 0.62);
+border: 1px solid rgba(67, 67, 67, 0.61);
+height: 26px;
 }
 
-#address {
-  position: relative;
+.row.city-input-wrapper {
+  margin-left: 12%;
+  width: 250px;
+  margin-top: 10%;
   float: left;
-}
+ }
+ ul li {
+   list-style-type: none;
+ }
+
+
+#address {
+  color: rgba(255, 255, 255, 0.51);
+    background-color: rgba(255, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.37);}
+
 
 .empty {
   background-color: rgba(143, 241, 195, 0);
@@ -58,12 +75,6 @@ body {
   text-align: center;
   margin-top: -110px;
 }
-
-#address {
-  color: black;
-}
-
-
 .menu-items {
   height: 350px;
   width: 175px;
@@ -114,6 +125,10 @@ body {
   height: 150px;
 
 }
+.content-images {
+  border-radius: 100px;
+  margin-left: 67% !important;
+}
 
 .empty {
   width: 100%;
@@ -146,7 +161,7 @@ footer {
 }
 
 .col-md-12.index {
-  // background-color: rgba(85, 85, 85, 0.63);
+  background-color: rgba(43, 43, 43, 0.43);
   margin-top: 5%;
 }
 
