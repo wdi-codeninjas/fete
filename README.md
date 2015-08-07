@@ -15,6 +15,7 @@
 **TECHNOLOGIES USED:** HTML5, CSS3, SASS, Media Queries, BOOTSTRAP, API, AJAX, JSON, JAVASCRIPT, JQUERY, MVC, SINATRA, ACIVE RECORD, Ruby, SQL.
 
 **PROUD MOMENT IN OUR app.js FOLDER**
+```javascript
 $.ajax({
       method: "GET",
       url: "http://ws.audioscrobbler.com/2.0/?method=geo.getEvents&location=" + cityname + "&api_key=2e8b4c0a324101689acd8d782097b1fc&format=json",
@@ -58,7 +59,7 @@ $.ajax({
 
     });
   });
-
+```
 
 
 
