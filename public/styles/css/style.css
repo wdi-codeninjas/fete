@@ -1,43 +1,463 @@
-/*
-Error: Invalid CSS after "}": expected "}", was ""
-        on line 614 of styles/css/style.scss
+html {
+  -webkit-font-smoothing: antialiased; }
 
-609: }
-610: .menu {
-611:   margin-top: 0;
-612:   z-index: 100;
-613: }
+body {
+  background-image: url("/images/show.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  font-family: Open Sans; }
 
-Backtrace:
-styles/css/style.scss:614
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:1162:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:1098:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:1093:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:640:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:401:in `media_directive'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:219:in `special_directive'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:194:in `directive'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:657:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:650:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:117:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:42:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/engine.rb:403:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 614 of styles/css/style.scss\A \A 609: }\A 610: .menu {\A 611:   margin-top: 0;\A 612:   z-index: 100;\A 613: }"; }
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000; }
+
+.row {
+  margin: 0 auto; }
+
+h1 {
+  color: #21A675; }
+
+input.addconcert {
+  position: relative;
+  float: left;
+  background-color: rgba(255, 255, 255, 0);
+  color: #21A675;
+  border: 1px solid rgba(67, 67, 67, 0.61);
+  height: 26px;
+  margin-left: -82%;
+  margin-top: -10%; }
+
+.login_logout {
+  position: relative;
+  float: left; }
+
+a {
+  color: #21A675; }
+
+.logo-text {
+  position: relative;
+  float: right;
+  margin-right: 10%;
+  z-index: 500; }
+
+#city-name-wrapper {
+  text-align: center; }
+
+#login-button {
+  position: relative;
+  float: left;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.51);
+  border: 1px solid #21A675;
+  height: 26px; }
+
+#register-button {
+  position: relative;
+  float: left;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.51);
+  border: 1px solid #21A675;
+  height: 26px;
+  margin-left: 30%; }
+
+.buttons-wrapper {
+  margin-left: 38%;
+  float: left;
+  margin-top: 10%;
+  position: relative; }
+
+.cityicon {
+  height: 50px;
+  width: 60px;
+  position: relative;
+  float: right;
+  margin-top: 2%;
+  margin-right: -22%; }
+
+.buttons-wrapper.text {
+  margin-left: -44px;
+  color: gray; }
+
+#city-submit {
+  position: relative;
+  float: left;
+  margin-left: 38%;
+  border: 1px solid #21A675;
+  margin-top: 18px;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.51);
+  height: 26px; }
+
+.row.city-input-wrapper {
+  margin-left: 12%;
+  width: 250px;
+  margin-top: 30%;
+  float: left; }
+
+ul li {
+  list-style-type: none;
+  font-family: 'Helvetica Neue', helvetica, arial, sans-serif; }
+
+ul {
+  background-color: rgba(27, 27, 27, 0.63);
+  margin-top: 25%;
+  font-family: 'Helvetica Neue', helvetica, arial, sans-serif; }
+
+#address {
+  background-color: rgba(255, 0, 0, 0);
+  border: 2px solid #21A675;
+  text-align: center;
+  font-size: 35px;
+  height: 50px;
+  width: 100%; }
+
+#map {
+  height: 400px;
+  width: 50%;
+  margin-left: 25%;
+  background-color: #21a878;
+  opacity: 0.8;
+  border-radius: 60%;
+  margin-top: 5%;
+  display: none; }
+
+.btn.btn-default.btn-lg {
+  position: relative;
+  float: left;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0);
+  color: #21A675;
+  border: 0px solid gray; }
+
+.menu {
+  width: 15%;
+  height: 1000px;
+  background-color: rgba(15, 15, 15, 0.68);
+  position: fixed;
+  z-index: 5;
+  padding-top: 20%;
+  text-align: center;
+  margin-top: -110px; }
+
+.inputcity {
+  float: left;
+  position: relative;
+  margin-top: 30%;
+  height: 50px;
+  text-align: center;
+  font-size: 35px;
+  width: 300px; }
+
+.pinbutton-wrapper {
+  position: relative;
+  float: left;
+  height: 200px;
+  width: 25%;
+  padding-right: 10%;
+  margin-left: 38%; }
+
+.container {
+  position: relative;
+  float: left;
+  margin-top: 5%; }
+
+.container.header {
+  position: relative;
+  float: left;
+  margin-top: 5%; }
+
+.pinmap {
+  position: relative;
+  float: left;
+  margin-left: 43%;
+  width: 150px;
+  margin-top: 3%;
+  height: 150px; }
+
+.content-images {
+  border-radius: 100px;
+  margin-left: 67% !important; }
+
+.empty {
+  width: 100%;
+  height: 620px;
+  background-color: rgba(143, 241, 195, 0); }
+
+.col-md-12.content.my_events {
+  padding-top: 5%;
+  text-align: center;
+  color: #807e7e; }
+
+.col-md-8 {
+  background-color: rgba(27, 27, 27, 0.63);
+  margin-top: 5%; }
+
+footer {
+  position: relative;
+  float: left;
+  background-color: rgba(27, 27, 27, 0.63);
+  margin-top: 5%; }
+
+.col-md-12.header {
+  background-color: rgba(27, 27, 27, 0.87);
+  width: 100%; }
+
+.col-md-12.content {
+  width: 100%;
+  height: 450px;
+  margin-top: 6.5%;
+  background-color: rgba(27, 27, 27, 0.63); }
+
+.col-md-12 {
+  padding: 0; }
+
+.col-md-4 {
+  text-align: center; }
+
+.col-md-12.login {
+  margin-top: 10%; }
+
+.eq-spinner {
+  height: 20px;
+  width: 21px;
+  float: left;
+  position: fixed;
+  margin-left: 25%;
+  margin-top: 3%;
+  transform: rotate(180deg); }
+
+.eq-spinner:before, .eq-spinner:after, .eq-spinner > i {
+  float: left;
+  width: 5px;
+  height: 20px;
+  background: #21a878;
+  margin-left: 3px;
+  content: ""; }
+
+.eq-spinner:before {
+  margin-left: 0; }
+
+.eq-spinner:before {
+  animation: bounce-3 1s infinite linear; }
+
+.eq-spinner > i {
+  animation: bounce-2 1s infinite linear; }
+
+.eq-spinner:after {
+  animation: bounce-1 1s infinite linear; }
+
+@keyframes bounce-1 {
+  0% {
+    height: 1px; }
+  16.7% {
+    height: 20px; }
+  33.4% {
+    height: 20px; }
+  100% {
+    height: 1px; } }
+@keyframes bounce-2 {
+  0% {
+    height: 1px; }
+  16.7% {
+    height: 1px; }
+  33.4% {
+    height: 20px; }
+  50% {
+    height: 20px; }
+  100% {
+    height: 1px; } }
+@keyframes bounce-3 {
+  0% {
+    height: 1px; }
+  33.4% {
+    height: 1px; }
+  50% {
+    height: 20px; }
+  66.7% {
+    height: 20px; }
+  100% {
+    height: 1px; } }
+.wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 99; }
+
+p.form-title {
+  font-family: 'Open Sans' , sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 5%;
+  text-transform: uppercase;
+  letter-spacing: 4px; }
+
+form {
+  width: 250px;
+  margin: 0 auto; }
+
+form.login input[type="text"], form.login input[type="password"] {
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+  background: 0;
+  border: 0;
+  border-bottom: 1px solid #FFFFFF;
+  outline: 0;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  color: #FFFFFF;
+  outline: 0; }
+
+form.login input[type="submit"] {
+  width: 100%;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 16px;
+  outline: 0;
+  cursor: pointer;
+  letter-spacing: 1px; }
+
+form.login input[type="submit"]:hover {
+  transition: background-color 0.5s ease; }
+
+form.login .remember-forgot {
+  float: left;
+  width: 100%;
+  margin: 10px 0 0 0; }
+
+form.login .forgot-pass-content {
+  min-height: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+form.login label, form.login a {
+  font-size: 12px;
+  font-weight: 400;
+  color: #FFFFFF; }
+
+form.login a {
+  transition: color 0.5s ease; }
+
+form.login a:hover {
+  color: #2ecc71; }
+
+.pr-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none; }
+
+.show-pass-reset {
+  display: block !important; }
+
+.pass-reset {
+  margin: 0 auto;
+  width: 250px;
+  position: relative;
+  margin-top: 22%;
+  z-index: 999;
+  background: #FFFFFF;
+  padding: 20px 15px; }
+
+.pass-reset label {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 15px; }
+
+.pass-reset input[type="email"] {
+  width: 100%;
+  margin: 5px 0 0 0;
+  padding: 5px 10px;
+  background: 0;
+  border: 0;
+  border-bottom: 1px solid #000000;
+  outline: 0;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  color: #000000;
+  outline: 0; }
+
+.pass-reset input[type="submit"] {
+  width: 100%;
+  border: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 10px;
+  outline: 0;
+  cursor: pointer;
+  letter-spacing: 1px; }
+
+.pass-reset input[type="submit"]:hover {
+  transition: background-color 0.5s ease; }
+
+.posted-by {
+  position: relative;
+  bottom: 26px;
+  margin: 0 auto;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.66);
+  padding: 10px;
+  left: 45%; }
+
+@media (max-width: 500px) {
+  .col-md-12.login {
+    padding-top: 20%; }
+
+  .menu {
+    width: 30%;
+    margin-top: -40px; }
+
+  .pinmap {
+    margin-left: 36%;
+    height: 150px;
+    margin-top: 80px; }
+
+  #address {
+    margin-left: -72px; }
+
+  #city-submit {
+    margin-left: 8%; }
+
+  .empty {
+    height: 1px; }
+
+  .buttons-wrapper {
+    margin-left: 31%; }
+
+  input.addconcert {
+    margin-left: -37%; }
+
+  .content-images {
+    margin-left: 50% !important; }
+
+  .col-md-12 {
+    width: 100%; }
+
+  .eq-spinner {
+    margin-left: 89%;
+    height: 35px; }
+
+  .menu {
+    margin-top: 0;
+    z-index: 100; } }
+
+/*# sourceMappingURL=style.css.map */
