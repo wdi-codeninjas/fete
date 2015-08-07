@@ -1,14 +1,20 @@
+html {
+  -webkit-font-smoothing:antialiased;
+}
+
+
 body {
   background-image: url("/images/show.jpg");
   background-size: cover;
   background-attachment: fixed;
   color: white;
+  font-family: Open Sans;
 }
 
 header {
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .row {
@@ -115,11 +121,13 @@ height: 26px;
 
  ul li {
    list-style-type: none;
+   font-family: 'Helvetica Neue', helvetica, arial, sans-serif;;
  }
 
  ul {
    background-color: rgba(27, 27, 27, 0.63);
    margin-top: 25%;
+   font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
  }
 
 
@@ -575,7 +583,7 @@ form.login a:hover
   margin-top: 80px;
 }
 #address {
-  margin-left: -75px;
+  margin-left: -72px;
 }
 #city-submit {
   margin-left: 8%;

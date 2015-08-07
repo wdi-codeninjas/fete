@@ -1,13 +1,17 @@
+html {
+  -webkit-font-smoothing: antialiased; }
+
 body {
   background-image: url("/images/show.jpg");
   background-size: cover;
   background-attachment: fixed;
-  color: white; }
+  color: white;
+  font-family: Open Sans; }
 
 header {
   position: fixed;
   width: 100%;
-  z-index: 100; }
+  z-index: 1000; }
 
 .row {
   margin: 0 auto; }
@@ -93,11 +97,13 @@ a {
   float: left; }
 
 ul li {
-  list-style-type: none; }
+  list-style-type: none;
+  font-family: 'Helvetica Neue', helvetica, arial, sans-serif; }
 
 ul {
   background-color: rgba(27, 27, 27, 0.63);
-  margin-top: 25%; }
+  margin-top: 25%;
+  font-family: 'Helvetica Neue', helvetica, arial, sans-serif; }
 
 #address {
   background-color: rgba(255, 0, 0, 0);
@@ -426,7 +432,7 @@ form.login a:hover {
     margin-top: 80px; }
 
   #address {
-    margin-left: -75px; }
+    margin-left: -72px; }
 
   #city-submit {
     margin-left: 8%; }
