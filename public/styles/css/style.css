@@ -412,4 +412,46 @@ form.login a:hover {
   padding: 10px;
   left: 45%; }
 
+@media (max-width: 500px) {
+  .col-md-12.login {
+    padding-top: 20%; }
+
+  .menu {
+    width: 30%;
+    margin-top: -40px; }
+
+  .pinmap {
+    margin-left: 36%;
+    height: 150px;
+    margin-top: 80px; }
+
+  #address {
+    margin-left: -75px; }
+
+  #city-submit {
+    margin-left: 8%; }
+
+  .empty {
+    height: 1px; }
+
+  .buttons-wrapper {
+    margin-left: 31%; }
+
+  input.addconcert {
+    margin-left: -37%; }
+
+  .content-images {
+    margin-left: 50% !important; }
+
+  .col-md-12 {
+    width: 100%; }
+
+  .eq-spinner {
+    margin-left: 89%;
+    height: 35px; }
+
+  .menu {
+    margin-top: 0;
+    z-index: 100; } }
+
 /*# sourceMappingURL=style.css.map */
