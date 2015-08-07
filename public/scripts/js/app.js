@@ -13,7 +13,6 @@ $( document ).ready(function() {
 
   $('#city-submit').click(function(evt) {
     $('.empty').slideUp(2000);
-    $('.pinmap').slideUp(2000);
     $('#city-name-wrapper h1').empty();
     $('ul').empty();
     $('.eq-spinner').fadeIn(600).fadeOut(2000);
@@ -30,8 +29,7 @@ $( document ).ready(function() {
 
     $.ajax({
       method: "GET",
-      url: "http://ws.audioscrobbler.com/2.0/?method=geo.getEvents&location=" + cityname + "&api_key=d7956184b9abfb6d926912d4d3058fc2&format=json",
-      dataType: "json",
+      url: "http://ws.audioscrobbler.com/2.0/?method=geo.getEvents&location=" + cityname + "&api_key=2e8b4c0a324101689acd8d782097b1fc&format=json",
 
       success: function(data) {
         console.log(data);

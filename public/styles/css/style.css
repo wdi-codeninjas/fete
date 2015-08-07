@@ -25,12 +25,18 @@ input.addconcert {
   margin-left: -82%;
   margin-top: -10%; }
 
+.login_logout {
+  position: relative;
+  float: left; }
+
 a {
   color: #21A675; }
 
 .logo-text {
   position: relative;
-  float: left; }
+  float: right;
+  margin-right: 10%;
+  z-index: 500; }
 
 #city-name-wrapper {
   text-align: center; }
@@ -58,8 +64,17 @@ a {
   margin-top: 10%;
   position: relative; }
 
+.cityicon {
+  height: 50px;
+  width: 60px;
+  position: relative;
+  float: right;
+  margin-top: 2%;
+  margin-right: -22%; }
+
 .buttons-wrapper.text {
-  margin-left: -44px; }
+  margin-left: -44px;
+  color: gray; }
 
 #city-submit {
   position: relative;
@@ -74,7 +89,7 @@ a {
 .row.city-input-wrapper {
   margin-left: 12%;
   width: 250px;
-  margin-top: 50%;
+  margin-top: 30%;
   float: left; }
 
 ul li {
@@ -164,6 +179,11 @@ ul {
   height: 620px;
   background-color: rgba(143, 241, 195, 0); }
 
+.col-md-12.content.my_events {
+  padding-top: 5%;
+  text-align: center;
+  color: #807e7e; }
+
 .col-md-8 {
   background-color: rgba(27, 27, 27, 0.63);
   margin-top: 5%; }
@@ -175,13 +195,13 @@ footer {
   margin-top: 5%; }
 
 .col-md-12.header {
-  background-color: rgba(27, 27, 27, 0.63);
+  background-color: rgba(27, 27, 27, 0.87);
   width: 100%; }
 
 .col-md-12.content {
   width: 100%;
-  height: 350px;
-  margin-top: 15%;
+  height: 450px;
+  margin-top: 6.5%;
   background-color: rgba(27, 27, 27, 0.63); }
 
 .col-md-12 {
@@ -190,13 +210,16 @@ footer {
 .col-md-4 {
   text-align: center; }
 
+.col-md-12.login {
+  margin-top: 10%; }
+
 .eq-spinner {
   height: 20px;
   width: 21px;
   float: left;
   position: fixed;
-  margin-left: -1%;
-  margin-top: 9%;
+  margin-left: 25%;
+  margin-top: 3%;
   transform: rotate(180deg); }
 
 .eq-spinner:before, .eq-spinner:after, .eq-spinner > i {

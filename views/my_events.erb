@@ -1,5 +1,8 @@
-<% @my_events.each do |event| %>
 
-  <li><%= event.artist %> playing at <%= event.venue %> on <%= event.datetime %></li>
+<div class="col-md-12 content my_events">
+  <% @my_events.each do |event| %>
 
-<% end %>
+    <li><%= event.artist %> playing at <%= event.venue %> on <%= event.datetime %></li>
+
+  <% end %>
+</div>
