@@ -1,5 +1,9 @@
 # song city
-![alt image] (http://i.imgur.com/44zSPzM.jpg,http://i.imgur.com/EdSKFt7.png)
+
+![alt image] (http://i.imgur.com/EdSKFt7.png)
+![alt image] (http://i.imgur.com/M4IxixE.png)
+![alt image] (http://i.imgur.com/8Rk7bzi.png)
+
 
 **"Song City":VERSION 1.0 (built in 4 days)**
 **SUMMARY:** This is a full stack web application that finds the top 10 shows/festivals based on any city in the world. 
@@ -16,5 +20,8 @@
 4. Run the migrations.sql file in PostgreSQL to gernate the required databases.
 5. Run 'bundle exec rackup'
 6. Browse to localhost:9292
+
+**Original Mockup/ Wireframe**
+![alt image] (http://i.imgur.com/44zSPzM.jpg)
 
 **VERSION 2.0 will include:** improved fonts, images, more reliable API, logo, delete option for saved events, improved animations, "saved" shows menu gave the image as well as the location, logout button functionality, more items on the menu bar, about page.
