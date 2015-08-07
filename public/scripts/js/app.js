@@ -5,7 +5,7 @@ $( document ).ready(function() {
 
 
     $('.menu').hide();
-    // $('.eq-spinner').hide();
+    $('.eq-spinner').hide();
 
 
 
@@ -15,7 +15,7 @@ $( document ).ready(function() {
     $('.empty').slideUp(2000);
     $('#city-name-wrapper h1').empty();
     $('ul').empty();
-    // $('.eq-spinner').fadeIn(600).fadeOut(2000);
+    $('.eq-spinner').fadeIn(600).fadeOut(2000);
     $('#map').toggle();
 
     var map = new GMaps({
